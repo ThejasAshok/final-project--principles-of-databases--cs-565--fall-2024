@@ -2,29 +2,20 @@
   <fieldset>
     <legend>Search for an Account</legend>
 
-    <!-- Search Keyword -->
-    <label for="search">
-      Search Keyword:
-      <span title="Enter the site name or comment to find the account">?</span>
-    </label>
+    <label for="search">Search Keyword:</label>
     <input type="text" id="search" name="search" placeholder="Enter site/app name or comment" required autofocus>
 
-    <!-- Radio Buttons for Search Scope -->
     <p>
       <label>
-        <input type="radio" name="search-scope" value="site-name" checked>
-        Search by Site/App Name
+        <input type="radio" name="search-scope" value="site-name" checked> Search by Site/App Name
       </label>
       <label>
-        <input type="radio" name="search-scope" value="comment">
-        Search by Comment
+        <input type="radio" name="search-scope" value="comment"> Search by Comment
       </label>
     </p>
 
-    <!-- Hidden field to indicate form submission -->
     <input type="hidden" name="submitted" value="1">
 
-    <!-- Submit Button -->
     <p>
       <button type="submit" style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; cursor: pointer;">
         Search

@@ -2,48 +2,30 @@
   <fieldset>
     <legend>Update Account Details</legend>
 
-    <!-- Column to Update -->
-    <label for="current-attribute">
-      Column to Update:
-      <span title="Select the field you want to update (e.g., Site/App Name, URL, Password, or Comment)">?</span>
-    </label>
+    <label for="current-attribute">Column to Update:</label>
     <select name="current-attribute" id="current-attribute" required>
-      <option value="artist_name">Artist Name</option>
-      <option value="artist_id">Artist ID</option>
-    </select>
-    <br>
+      <option value="site_name">Site/App Name</option>
+      <option value="url">URL</option>
+      <option value="username">Username</option>
+      <option value="comment">Comment</option>
+      <option value="password">Password</option>
+    </select><br>
 
-    <!-- New Value -->
-    <label for="new-attribute">
-      New Value:
-      <span title="Enter the new value for the selected column">?</span>
-    </label>
-    <input type="text" name="new-attribute" id="new-attribute" required placeholder="Enter new value">
-    <br>
+    <label for="new-attribute">New Value:</label>
+    <input type="text" name="new-attribute" id="new-attribute" required placeholder="Enter new value"><br>
 
-    <!-- Match By Column -->
-    <label for="query-attribute">
-      Match By Column:
-      <span title="Select the column used to find the record to update (e.g., Artist ID or Artist Name)">?</span>
-    </label>
+    <label for="query-attribute">Match By Column:</label>
     <select name="query-attribute" id="query-attribute" required>
-      <option value="artist_id">Artist ID</option>
-      <option value="artist_name">Artist Name</option>
-    </select>
-    <br>
+      <option value="site_name">Site/App Name</option>
+      <option value="username">Username</option>
+      <option value="comment">Comment</option>
+    </select><br>
 
-    <!-- Value to Match -->
-    <label for="pattern">
-      Value to Match:
-      <span title="Enter the value to match in the selected column">?</span>
-    </label>
-    <input type="text" name="pattern" id="pattern" required placeholder="Enter value to match">
-    <br>
+    <label for="pattern">Value to Match:</label>
+    <input type="text" name="pattern" id="pattern" required placeholder="Enter value to match"><br>
 
-    <!-- Hidden Field -->
     <input type="hidden" name="submitted" value="2">
 
-    <!-- Submit Button -->
     <p>
       <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">
         Update

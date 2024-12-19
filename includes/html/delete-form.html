@@ -2,27 +2,23 @@
   <fieldset>
     <legend>Delete</legend>
 
-    <!-- Select Column to Delete By -->
     <label for="current-attribute">Select column to delete by:</label>
-    <select name="current-attribute" id="current-attribute">
-      <option value="artist_id">Artist ID</option>
-      <option value="artist_name">Artist Name</option>
+    <select name="current-attribute" id="current-attribute" required>
+      <option value="site_name">Site/App Name</option>
+      <option value="username">Username</option>
+      <option value="comment">Comment</option>
     </select><br>
 
-    <!-- Input for Pattern/Value -->
     <label for="pattern">Value to match:</label>
     <input type="text" name="pattern" id="pattern" required><br>
 
-    <!-- Hidden Input for Submitted Action -->
     <input type="hidden" name="submitted" value="4">
 
-    <!-- Submit Button -->
     <p><input type="submit" value="Delete"></p>
   </fieldset>
 </form>
 
 <script>
-  // Confirmation dialog before submitting the form
   function confirmDeletion() {
     return confirm('Are you sure you want to delete this record? This action cannot be undone.');
   }
