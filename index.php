@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <h1>CRUD Operations via a Web Interface</h1>
+      <h1>WEB APPLICATION</h1>
     </header>
     <form id="clear-results" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     </form>
