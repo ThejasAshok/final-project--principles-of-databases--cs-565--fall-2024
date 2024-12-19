@@ -1,8 +1,43 @@
-<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
   <fieldset>
-    <legend>Insert</legend>
-    INSERT INTO artist VALUES ( <input type="text" name="artist-id" placeholder="artist_id" required>, <input type="text" name="artist-name" placeholder="artist_name" required> );
-    <input type="hidden" name="submitted" value="3">
-    <p><input type="submit" value="insert"></p>
+    <legend><h2>Insert Account</h2></legend>
+
+    <div class="form-group">
+      <label for="app_name">Application Name:</label>
+      <input type="text" id="app_name" name="app_name" placeholder="Enter application name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="url">URL:</label>
+      <input type="text" id="url" name="url" placeholder="Enter URL">
+    </div>
+
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <select id="username" name="username" required>
+        <option value="" disabled selected>Select Username</option>
+        <?php
+          $rows = getUsernames(); // Fetch usernames dynamically
+          foreach ($rows as $row) {
+              echo '<option value="'.$row["username"].'">'.$row["username"].'</option>';
+          }
+        ?>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" placeholder="Add a comment" rows="4"></textarea>
+    </div>
+
+    <input type="hidden" name="submitted" value="5">
+    <div class="form-group">
+      <button type="submit" class="btn">Insert Account</button>
+    </div>
   </fieldset>
 </form>
